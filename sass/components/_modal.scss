@@ -1,0 +1,222 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity $animations;
+    
+
+    &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    }
+
+    &.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+/* -------------------MODAL WINDOW----------------- */
+
+.modal {
+    @media screen and (min-width:1200px){
+        width: 528px;
+    }
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    padding: 40px;
+    background-color: $bckground-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $animations;
+
+&__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    margin-top: 8px;
+    
+    display: flex;
+    align-items: center;
+    
+    cursor: pointer;
+    background: $bckground-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: fill $animations;
+    }
+
+&__close:hover,
+&__close:focus {
+    fill: $accent-color;
+    }
+
+&__title {
+    
+    @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+    }
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+    }
+}
+
+/* -------------------FORM----------------- */
+
+.form{
+    width: 370px;
+    
+        @media screen and (min-width: 1200px) {
+            width: 448px;
+        }
+
+&__label {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    }
+    
+&__text {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $form-color;
+    }
+    
+&__input {
+    padding: 11px 12px 11px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    
+    cursor: pointer;
+    }
+    
+&__icon {
+    position: absolute;
+    top: 50%;
+    transform: translate(Y -50%);
+    margin-left: 15px;
+    }
+    
+&__input:focus {
+    border-color: $accent-color;
+    }
+    
+&__input:focus + &__icon {
+    fill: $accent-color;
+    }
+
+&__textarea {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    padding: 12px 16px;
+    outline: none;
+    }
+    
+&__textarea:focus {
+    border-color: $accent-color;
+    }
+    
+&__label ::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    }
+
+&__btn {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-style: hidden;
+    padding: 10px 55px;
+    text-align: center;
+    cursor: pointer;
+    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    
+    color: $bckground-color;
+    background-color: $accent-color;
+    transition: box-shadow $animations,
+    color $animations,
+    background-color $animations;
+    }
+    
+&__btn:focus,
+&__btn:hover {
+    background-color: #188CE8;
+    color: $btn-bg-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+/* ---------------CHECKBOX---------------- */
+
+.checkbox{
+
+    @media screen and (min-width:1200px) {
+    font-size: 14px;   
+    }
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+&__icon {
+    margin-right: 7px;
+}
+
+&__input{
+    @extend %visually-hidden;
+}
+
+&__input:checked + &__icon {
+    fill: $accent-color;
+    background-color: $accent-color;
+    background-image: url(../images/checked.svg);
+    background-size: contain;
+    background-origin: content-box;
+}
+
+&__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $form-color;
+}
+
+&__link {
+    color: $accent-color;
+}
+
+}
+
+
+
+
+    
+       
+
+
+
+

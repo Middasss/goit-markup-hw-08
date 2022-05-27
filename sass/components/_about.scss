@@ -1,0 +1,47 @@
+.about{
+   @extend %container;
+   @media screen and (max-width: 1199px) {
+      display: none;
+   }
+   
+ &__section{
+    @extend %section;
+ }
+
+ &__title {
+    @extend %section__title;
+ }
+
+ &__list {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+ }
+
+
+ &__item {
+    @extend %list;
+    position: relative;
+    max-height: 294px;
+    margin-right: 30px;
+ }
+
+ &__item:last-child {
+    margin-right: 0;
+ }
+
+ &__subject {
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    position: absolute;
+    background: rgba(47, 48, 58, 0.8);
+    color: $bckground-color;
+    padding: 27px 82px;
+    width: 100%;
+    bottom: 0;
+ }
+}
+
