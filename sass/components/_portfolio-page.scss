@@ -55,7 +55,6 @@
 }
 
 &__btn {
-    @extend %link;
     line-height: 1.61;
     font-weight: 500;
     font-size: 16px;
@@ -71,7 +70,6 @@
 }
 
 &__btn--current,
-&__btn:focus,
 &__btn:hover {
     background-color: $accent-color;
     color: $btn-bg-color;
