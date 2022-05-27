@@ -1627,7 +1627,7 @@ body {
 .card__meta {
   position: relative;
   overflow: hidden;
-  max-height: 293px;
+  height: 292px;
 }
 
 .card__description {
