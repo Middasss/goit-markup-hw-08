@@ -70,6 +70,7 @@
 }
 
 &__btn--current,
+&__btn:focus,
 &__btn:hover {
     background-color: $accent-color;
     color: $btn-bg-color;
