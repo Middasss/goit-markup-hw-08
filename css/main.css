@@ -24,7 +24,7 @@ hr {
   margin: 0;
 }
 
-.header__logo, .footer__logo, .footer .contact__link, .address__link, .card__link {
+.header__logo, .footer__logo, .footer .contact__link, .address__link, .btn-bar__btn, .card__link {
   text-decoration: none;
 }
 
@@ -948,6 +948,19 @@ body {
   margin-left: 0px;
 }
 
+@media screen and (min-width: 768px) {
+  .team {
+    margin: 15px;
+    flex-basis: calc((100% - 4 * 15px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    flex-basis: calc((100% - 8 * 15px) / 4);
+  }
+}
+
 .team__name {
   text-align: center;
   font-weight: 500;
@@ -1627,7 +1640,7 @@ body {
 .card__meta {
   position: relative;
   overflow: hidden;
-  height: 292px;
+  max-height: 294px;
 }
 
 .card__description {

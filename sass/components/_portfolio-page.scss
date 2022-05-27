@@ -55,6 +55,7 @@
 }
 
 &__btn {
+    @extend %link;
     line-height: 1.61;
     font-weight: 500;
     font-size: 16px;
@@ -157,7 +158,7 @@
 &__meta {
     position: relative;
     overflow: hidden;
-    height: 292px;
+    max-height: 294px;
 }
 
 &__description {
